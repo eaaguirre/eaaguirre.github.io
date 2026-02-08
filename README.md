@@ -1,0 +1,2 @@
+# eaaguirre.github.io
+Curriculum
