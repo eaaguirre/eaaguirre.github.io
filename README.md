@@ -1,2 +1,1 @@
-# eaaguirre.github.io
-Curriculum
+# Portafolio
