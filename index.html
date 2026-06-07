@@ -162,13 +162,13 @@
                 <ul>
                   <li>
                     <i class="bi bi-chevron-right"></i>
-                    <strong>Edad:</strong> <span>40</span>
+                    <strong>Edad:</strong> <span id="age"></span>
                   </li>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong>Titulo:</strong>
-                    <span>Especialista en Ingenieria de Software</span>
-                  </li>
+                <li>
+                <i class="bi bi-chevron-right"></i>
+                <strong>Titulo:</strong>
+                <span>Especialista en Ingenieria de Software</span>
+                </li>
                   <li>
                     <i class="bi bi-chevron-right"></i>
                     <strong>Correo Electronico:</strong>
@@ -631,6 +631,25 @@
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+  <script>
+  function calcularEdad(fechaNacimiento) {
+    const hoy = new Date();
+    const nacimiento = new Date(fechaNacimiento);
+
+    let edad = hoy.getFullYear() - nacimiento.getFullYear();
+    const mes = hoy.getMonth() - nacimiento.getMonth();
+
+    if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+      edad--;
+    }
+
+    return edad;
+  }
+
+  document.getElementById("age").textContent = calcularEdad("1985-07-03");
+</script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
